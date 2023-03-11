@@ -12,6 +12,16 @@
         {
             get
             {
+                if (string.IsNullOrWhiteSpace(FirstName))
+                {
+                    return LastName;
+                }
+                
+                if (string.IsNullOrWhiteSpace(LastName))
+                {
+                    return FirstName;
+                }
+
                 return $"{FirstName} {LastName}";
             }
         }
