@@ -28,6 +28,7 @@
 
         public string EmailAddress { get; set; }
 
+        public static int InstanceCount { get; set; }
 
     }
 }
