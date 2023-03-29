@@ -30,5 +30,38 @@
 
         public static int InstanceCount { get; set; }
 
+        public Customer Retrieve(int customerId)
+        {
+            // Retrieve a single customer
+
+            return new Customer();
+        }
+
+        public List<Customer> Retrieve()
+        {
+            // Retrieve all customers
+
+            return new List<Customer>();
+        }
+
+        public bool Save()
+        {
+            // Saves the current customer
+
+            return true;
+        }
+
+        public bool Validate()
+        {
+            // Validates the customer data
+
+            var isValid = true;
+
+            if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
+            if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
+
+            return isValid;
+        }
+
     }
 }
