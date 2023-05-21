@@ -4,7 +4,7 @@
     {
         public Customer()
         {
-            
+
         }
 
         public Customer(int customerId)
@@ -26,7 +26,7 @@
                 {
                     return LastName;
                 }
-                
+
                 if (string.IsNullOrWhiteSpace(LastName))
                 {
                     return FirstName;
@@ -39,27 +39,6 @@
         public string EmailAddress { get; set; }
 
         public static int InstanceCount { get; set; }
-
-        public Customer Retrieve(int customerId)
-        {
-            // Retrieve a single customer
-
-            return new Customer();
-        }
-
-        public List<Customer> Retrieve()
-        {
-            // Retrieve all customers
-
-            return new List<Customer>();
-        }
-
-        public bool Save()
-        {
-            // Saves the current customer
-
-            return true;
-        }
 
         public bool Validate()
         {
