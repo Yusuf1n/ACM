@@ -3,37 +3,36 @@
 public class OrderRepository
 {
     /// <summary>
-    /// Retrieve one customer.
+    /// Retrieve one order.
     /// </summary>
-    /// <param name="customerId"></param>
+    /// <param name="orderId"></param>
     /// <returns></returns>
-    public Customer Retrieve(int customerId)
+    public Order Retrieve(int orderId)
     {
-        // Create the instance of the Customer class
-        // Pass in the required Id
-        Customer customer = new Customer(customerId);
+        // Create the instance of the Order class
+        // Pass in the requested Id
+        Order order = new Order(orderId);
 
-        // Code that retrieves the defined customer
+        // Code that retrieves the defined order
 
-        // Temporary hard-coded values to return a populated customer
-        if (customerId == 1)
+        // Temporary hard-coded values to return a populated order
+        if (orderId == 1)
         {
-            customer.EmailAddress = "yusufnaheem1@gmail.com";
-            customer.FirstName = "Yusuf";
-            customer.LastName = "Naheem";
+            // Use current year in  hard-coded data
+            order.OrderDate = new DateTimeOffset(DateTime.Now.Year, 4, 14, 10, 00, 00, new TimeSpan(7, 0, 0));
         }
 
-        return customer;
+        return order;
     }
 
     /// <summary>
-    /// Saves the current customer. 
+    /// Saves the current order. 
     /// </summary>
-    /// <param name="customer"></param>
+    /// <param name="order"></param>
     /// <returns></returns>
-    public bool Save(Customer customer)
+    public bool Save(Order order)
     {
-        // Code that saves the passed in customer
+        // Code that saves the passed in order
 
         return true;
     }
