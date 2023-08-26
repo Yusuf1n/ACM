@@ -1,4 +1,6 @@
-﻿namespace ACM.BL;
+﻿using System.Diagnostics.Metrics;
+
+namespace ACM.BL;
 
 public class AddressRepository
 {
@@ -41,12 +43,12 @@ public class AddressRepository
 
         address = new Address(2);
         {
-            address.AddressType = 2;
-            address.StreetLine1 = "85 Well Lane";
-            address.City = "Patchole";
-            address.County = "Devon";
+            address.StreetLine1 = "Cambridge Road";
+            address.StreetLine2 = "";
+            address.City = "North Carlton";
+            address.County = "Lincolnshire";
             address.Country = "United Kingdom";
-            address.PostCode = "EX31 1FR";
+            address.PostCode = "LN1 9BG";
         }
         addressList.Add(address);
 
